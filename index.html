@@ -94,3 +94,99 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buck's Journey – A Choice Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+    <div id="game-container">
+        <div id="top-bar">
+            <h1 id="title">Buck's Journey</h1>
+            <div id="top-controls">
+                <button id="theme-toggle" title="Toggle light/dark mode">🌙</button>
+                <button id="sound-toggle" title="Toggle ambient sound">🔈</button>
+                <button id="save-btn" title="Save progress">💾</button>
+                <button id="load-btn" title="Load progress">📂</button>
+            </div>
+        </div>
+
+        <div id="chapter-label"></div>
+
+        <div id="chapter-overlay" class="hidden">
+            <div id="chapter-overlay-text"></div>
+        </div>
+
+        <div id="image-area">
+            <div id="snow-layer"></div>
+            <img id="background" src="winterday.png" alt="Background">
+            <img id="buck" src="buck.png" alt="Buck">
+            <img id="spitz" src="spitz.png" alt="Spitz">
+            <img id="human-enemy" src="human.png" alt="Human Enemy">
+        </div>
+
+        <div id="scene-text"></div>
+
+        <div id="choices-wrapper">
+    <div id="choices-snow"></div>
+    <div id="choices"></div>
+</div>
+
+        
+
+        <div id="battle-ui" class="hidden">
+            <div class="battle-row">
+                <div class="battle-card">
+                    <div class="name-row">
+                        <span>Buck</span>
+                    </div>
+                    <div class="hp-label">HP</div>
+                    <div class="bar">
+                        <div id="buck-hp-bar" class="bar-fill buck-hp"></div>
+                    </div>
+                </div>
+                <div class="battle-card">
+                    <div class="name-row">
+                        <span id="enemy-name">Enemy</span>
+                    </div>
+                    <div class="hp-label">HP</div>
+                    <div class="bar">
+                        <div id="enemy-hp-bar" class="bar-fill enemy-hp"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="battle-log"></div>
+            <div id="battle-moves">
+                <div class="battle-menu">
+                    <button class="battle-menu-btn" data-menu="attack">ATTACK</button>
+                    <button class="battle-menu-btn" data-menu="special">SPECIAL</button>
+                    <button class="battle-menu-btn" data-menu="run">RUN</button>
+                    <button class="battle-menu-btn" data-menu="misc">MISC</button>
+                </div>
+                <div id="battle-move-list"></div>
+            </div>
+        </div>
+
+        <div id="stats">
+            <div class="stat"><span>Wildness</span><div class="bar"><div id="wildness-bar" class="bar-fill wild"></div></div></div>
+            <div class="stat"><span>Loyalty</span><div class="bar"><div id="loyalty-bar" class="bar-fill loyalty"></div></div></div>
+            <div class="stat"><span>Survival</span><div class="bar"><div id="survival-bar" class="bar-fill survival"></div></div></div>
+
+            <div class="stat"><span>Hunger</span><div class="bar"><div id="hunger-bar" class="bar-fill hunger"></div></div></div>
+            <div class="stat"><span>Fatigue</span><div class="bar"><div id="fatigue-bar" class="bar-fill fatigue"></div></div></div>
+            <div class="stat"><span>Cold</span><div class="bar"><div id="cold-bar" class="bar-fill cold"></div></div></div>
+            <div class="stat"><span>Morale</span><div class="bar"><div id="morale-bar" class="bar-fill morale"></div></div></div>
+            <div class="stat"><span>Pack Respect</span><div class="bar"><div id="respect-bar" class="bar-fill respect"></div></div></div>
+        </div>
+    </div>
+
+    <audio id="howl-sound" src="howl.mp3"></audio>
+    <audio id="ambient-sound" src="wind.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
